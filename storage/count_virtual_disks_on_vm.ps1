@@ -1,0 +1,1 @@
+Get-VM -name * |Select Name,@{N=’vDisk’;E={($_.ExtensionData.Config.Hardware.Device | where{$_ -is [VMware.Vim.VirtualDisk]}).Count}}

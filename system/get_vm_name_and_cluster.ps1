@@ -1,0 +1,1 @@
+Get-VM | Select Name, @{N=”Cluster”;E={Get-Cluster -VM $_}}
