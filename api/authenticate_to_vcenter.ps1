@@ -41,6 +41,6 @@ $head = @{
 }
 
 #Authenticate against vCenter
-$r = Invoke-WebRequest -Uri https://10.10.10.50/rest/com/vmware/cis/session -Method Post -Headers $head
+$r = Invoke-WebRequest -Uri https://10.10.10.50/rest/com/vmware/cis/session -Method Post -Headers $head -UseBasicParsing
 $token = (ConvertFrom-Json $r.Content).value
 $session = @{'vmware-api-session-id' = $token}
