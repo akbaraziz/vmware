@@ -1,0 +1,1 @@
+Connect-VIServer -Server esx3.example.com -Protocol http -User 'MyAdministratorUser' -Password 'MyPassword'
